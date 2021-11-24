@@ -7,7 +7,7 @@ league_year = 2021
 
 def run():
     league = projections.get_league(league_id, league_year)
-    filename = str(league_id) + '_week' + str(league.current_week) + '.csv'
+    filename = f"{str(league_id)}_week{str(league.current_week)}.csv"
     while True:
         scores = projections.get_current_projected_scores(league)
         projections.store_projected_scores(filename, scores)
